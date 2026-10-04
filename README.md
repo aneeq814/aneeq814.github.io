@@ -28,7 +28,7 @@ A classified-lab / dissection-file interface, in the spirit of interactive creat
 | 06 | **Subject report** | Behavioural notes and five operating protocols |
 | 07 | **Contact** | Channels, message form that copies itself and opens LinkedIn, sign-off |
 
-## Highlights
+## Verified
 
 - **Self-contained single file** — images *and* fonts inlined as data URIs: instant load, exact typography everywhere, works offline.
 - **Responsive** — verified from 390 px phones to 1440 px+ desktops; horizontal rails hide gracefully on small screens.
