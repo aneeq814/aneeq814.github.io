@@ -17,7 +17,7 @@ A responsive, static one-page portfolio built with **vanilla HTML, CSS and JavaS
 | 02 | **About** | *Curiosity at the meeting point of design, intelligence and security* |
 | 03 | **Focus** | *Three fields. A strong foundation.* — interactive focus map (node / list driven panel) |
 | 04 | **Education** | NUST → Punjab Group of Colleges → Army Public Schools & Colleges System, each with its institution mark |
-| 05 | **Contact** | LinkedIn, Instagram and a closing call to action |
+| 05 | **Contact** | LinkedIn, Instagram, personal + university email and a closing call to action |
 
 ## Project structure
 
@@ -68,7 +68,7 @@ The site is deployed from the `main` branch, root folder (`/`), and serves at **
 - LinkedIn and Instagram links are the URLs supplied by Aneeq.
 - The focus map is interactive: select a focus item or a node to change the panel.
 - Academic grades, marks and positions reflect the information supplied for the portfolio.
-- There is no contact email on the page because none was provided.
+- Two `mailto:` contact links sit in the Connect section: `aneeqkhan499@gmail.com` (labelled *Personal email · Gmail*) and `maneeq.bscs26seecs@seecs.edu.pk` (labelled *University email*). They reuse the `.social-link` styling. The university address is written with a `maneeq.` local part — keep it exactly as shown, with no space, if you edit it.
 - The supplied files did not include a NUST logo, so the education card uses a text-only NUST mark. NUST states that its emblem/signature requires prior written approval for use — if you have an approved asset, drop it in `assets/` and reference it from `index.html`.
 - Institution logos belong to their respective institutions and are used for identification purposes only.
 
