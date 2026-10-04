@@ -25,6 +25,9 @@ A responsive, static one-page portfolio built with **vanilla HTML, CSS and JavaS
 .
 ├── index.html          # the site (single file) ← served by GitHub Pages
 ├── .nojekyll           # serve assets as-is, no Jekyll processing
+├── favicon.ico         # logo favicon (16 / 32 / 48 px layers)
+├── favicon-32.png      # logo favicon, PNG fallback for browsers that prefer it
+├── apple-touch-icon.png  # 180 px home-screen icon (opaque, per Apple guidance)
 ├── assets/
 │   ├── aneeq-portrait.jpg
 │   ├── aneeq-mark.jpg

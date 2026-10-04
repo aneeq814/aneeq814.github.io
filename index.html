@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090c0b">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="description" content="Muhammad Aneeq Khan — UI/UX designer and aspiring cybersecurity and AI security enthusiast exploring safer, more human digital experiences.">
   <meta property="og:title" content="Muhammad Aneeq Khan — Design × Security">
   <meta property="og:description" content="Exploring the intersection of human-centered design, artificial intelligence and cybersecurity.">
@@ -122,6 +125,8 @@
     .section-topline .micro span { color: var(--acid); }
     .section-heading { margin: 0; font-family: var(--display); font-weight: 500; text-transform: uppercase; letter-spacing: -.045em; line-height: .94; }
     .section-heading em { color: var(--acid); font-style: normal; }
+    /* .keep wraps a phrase that must never break apart; it stays plain (not outlined) text */
+    .focus-intro .section-heading .keep, .contact-heading .keep { color: inherit; -webkit-text-stroke: 0; }
     .text-link { display: inline-flex; align-items: center; gap: 10px; padding: 0 0 7px; border-bottom: 1px solid var(--acid); color: var(--paper); font: .68rem var(--mono); text-transform: uppercase; letter-spacing: .07em; transition: color .2s, gap .2s; }
     .text-link:hover { color: var(--acid); gap: 15px; }
     .text-link .arrow { color: var(--acid); font-size: 1rem; line-height: .7; }
@@ -419,7 +424,8 @@
       .tag-row { margin-top: 23px; }
       .tag { font-size: .53rem; }
       .focus-intro { grid-template-columns: 1fr; gap: 19px; padding-top: 39px; padding-bottom: 30px; }
-      .focus-intro .section-heading { font-size: clamp(3.25rem, 15vw, 5.5rem); }
+      .focus-intro .section-heading { font-size: clamp(2.3rem, 13.5vw, 5.5rem); }
+      .focus-intro .section-heading .keep, .contact-heading .keep { white-space: nowrap; }
       .focus-intro > p { font-size: .88rem; }
       .console-top { padding: 0 12px; font-size: .5rem; }
       .focus-layout { grid-template-columns: 1fr; }
@@ -451,7 +457,7 @@
       .achievement-number { font-size: 2.25rem; }
       .achievement-label { font-size: .5rem; }
       .contact-grid { grid-template-columns: 1fr; gap: 38px; padding-top: 43px; }
-      .contact-heading { font-size: clamp(3.55rem, 15vw, 5.8rem); }
+      .contact-heading { font-size: clamp(2.3rem, 13.5vw, 5.8rem); }
       .contact-copy { font-size: .88rem; }
       .social-link { min-height: 78px; }
       .contact-foot { margin-top: 50px; font-size: .51rem; }
@@ -571,7 +577,7 @@
       <div class="container">
         <div class="section-topline"><p class="eyebrow">02 / Current focus</p><p class="micro">Exploration in progress <span>●</span></p></div>
         <div class="focus-intro reveal">
-          <h2 class="section-heading" id="focus-title">Three fields.<br><span>One intent.</span></h2>
+          <h2 class="section-heading" id="focus-title"><span class="keep">Three fields.</span><br><span>One intent.</span></h2>
           <p>Good digital experiences don’t have to choose between being useful and being safe. I’m learning how these ideas connect—and where I can contribute.</p>
         </div>
         <div class="focus-console reveal delay-1">
@@ -663,7 +669,7 @@
         <div class="contact-grid">
           <div class="reveal">
             <span class="contact-kicker">Open to good conversations</span>
-            <h2 class="contact-heading" id="contact-heading">Let’s make<br>the <span>internet</span><br>safer.</h2>
+            <h2 class="contact-heading" id="contact-heading">Let’s make<br><span class="keep">the <span>internet</span></span><br>safer.</h2>
             <p class="contact-copy">I’m excited to connect with fellow university students and curious people around the world. If you care about AI security, cybersecurity, or thoughtful digital experiences, let’s learn from each other and build toward something better.</p>
           </div>
           <div class="social-list reveal delay-1" aria-label="Social profiles">
