@@ -27,8 +27,8 @@ MIME = {
     ".woff2": "font/woff2", ".woff": "font/woff",
 }
 FONTS = {
-    "__FONT_LATIN__": "assets/fonts/sg-latin.woff2",
-    "__FONT_LATIN_EXT__": "assets/fonts/sg-latin-ext.woff2",
+    "__FONT_INTER__": "assets/fonts/inter-normal.woff2",
+    "__FONT_INTER_ITALIC__": "assets/fonts/inter-italic.woff2",
 }
 
 
