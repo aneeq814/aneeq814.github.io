@@ -1,62 +1,75 @@
 # Muhammad Aneeq Khan — Portfolio
 
-Personal portfolio of **Muhammad Aneeq Khan** — UI/UX Designer and aspiring Cybersecurity & AI Security enthusiast, working at the intersection of Artificial Intelligence and the cyber world.
+Personal portfolio of **Muhammad Aneeq Khan** — UI/UX designer and aspiring cybersecurity & AI-security enthusiast, exploring the meeting point of design, artificial intelligence and security. First-semester student at NUST, Islamabad.
 
 🔗 **Live site:** https://aneeq814.github.io/
 
 ---
 
-## Design language — "Specimen Viewer"
+## What this site is
 
-A classified-lab / dissection-file interface, in the spirit of interactive creative-developer portfolios:
-
-- Near-black canvas (`#0a0907`) with acid-lime (`#D4FF00`), magenta (`#FF2E88`) and wireframe blue (`#2F45FF`) data accents
-- **Inter 24pt** display type (open-source, self-hosted) — heavy uppercase headlines with italic lime emphasis
-- HUD chrome: file header, live clock, hazard-class readout, vertical data rails, 7-number section navigation
-- Hazard tape dividers, notched instrument panels, corner ticks, barcode blocks, scanlines and grid
-- A **boot gate** that "initialises the subject viewer", an SVG wireframe specimen figure, and an interactive capability mesh with probe readouts
-
-## Sections
+A responsive, static one-page portfolio built with **vanilla HTML, CSS and JavaScript** — no build step and no external libraries. The visual direction is a dark editorial / security-lab treatment with custom copy and interaction.
 
 | # | Section | Content |
 | --- | --- | --- |
-| 01 | **Specimen** | Name/occupation tags, `UI/UX DESIGNER` display headline, threat level, wireframe specimen figure, portrait plate, live vitals telemetry, skill ticker |
-| 02 | **Manifest** | *"complexity is not a feature"* with strike-through; operator notes; prime directive card; observed traits |
-| 03 | **Data analysis** | Six interactive capability probes (click/keyboard) with a live readout panel |
-| 04 | **Intake records** | NUST (present) → Punjab Group of Colleges (A+, 1143/1200, 7th Lahore Board) → Army Public School for Boys, Sarfaraz Rafiqui Road (A++, 1063/1100, 17th Federal Board) |
-| 05 | **Telemetry** | Animated score counters and merit markers |
-| 06 | **Subject report** | Behavioural notes and five operating protocols |
-| 07 | **Contact** | Channels, message form that copies itself and opens LinkedIn, sign-off |
-
-## Verified
-
-- **Self-contained single file** — images *and* fonts inlined as data URIs: instant load, exact typography everywhere, works offline.
-- **Responsive** — verified from 390 px phones to 1440 px+ desktops; horizontal rails hide gracefully on small screens.
-- **Accessible** — keyboard-operable probes, ARIA labels, visible focus, `prefers-reduced-motion` support, Esc skips the boot gate.
-- **No dependencies** — no frameworks, no CDNs, no tracking, no external requests.
+| — | **Header** | Fixed nav + status rail |
+| 01 | **Hero** | Name, role, short pitch, portrait plate |
+| 02 | **About** | *Curiosity at the meeting point of design, intelligence and security* |
+| 03 | **Focus** | *Three fields. A strong foundation.* — interactive focus map (node / list driven panel) |
+| 04 | **Education** | NUST → Punjab Group of Colleges → Army Public Schools & Colleges System, each with its institution mark |
+| 05 | **Contact** | LinkedIn, Instagram and a closing call to action |
 
 ## Project structure
 
 ```
 .
-├── index.html                 # the site (self-contained) ← served by GitHub Pages
-├── src/index.template.html    # editable source (references assets/ normally)
-├── build.py                   # inlines images + fonts into index.html
-└── assets/
-    ├── avatar.jpg             # portrait
-    ├── nust-logo.png          # NUST
-    ├── pgc-logo.png           # Punjab Group of Colleges
-    ├── apsacs-logo.png        # Army Public Schools & Colleges System
-    └── fonts/                 # Inter (woff2, latin, roman + italic)
+├── index.html          # the site (single file) ← served by GitHub Pages
+├── .nojekyll           # serve assets as-is, no Jekyll processing
+├── assets/
+│   ├── aneeq-portrait.jpg
+│   ├── aneeq-mark.jpg
+│   ├── pgc-logo.png
+│   └── apsacs-logo.jpg
+└── previous-design/    # the previous "specimen viewer" build, archived whole
+    ├── index.html      # byte-identical to what was live before this change
+    ├── src/index.template.html
+    ├── build.py
+    └── assets/
 ```
 
-### Editing the site
+## Preview locally
 
-1. Edit `src/index.template.html`, or drop new images into `assets/`.
-2. Rebuild: `python3 build.py`
-3. Commit and push — GitHub Pages redeploys in about a minute.
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000`.
+
+## Rolling back to the previous design
+
+`previous-design/` holds the earlier "specimen viewer" build, complete and rebuildable:
+
+```bash
+cd previous-design
+python3 build.py     # regenerates index.html from src/index.template.html + assets/
+```
+
+Running its `build.py` reproduces the archived `index.html` byte-for-byte. To restore it site-wide, move those files back to the repository root.
+
+## Published with GitHub Pages
+
+The site is deployed from the `main` branch, root folder (`/`), and serves at **https://aneeq814.github.io/**. To change it, edit `index.html` (or swap files in `assets/`) and push to `main` — Pages redeploys in about a minute.
+
+## Notes on content and assets
+
+- LinkedIn and Instagram links are the URLs supplied by Aneeq.
+- The focus map is interactive: select a focus item or a node to change the panel.
+- Academic grades, marks and positions reflect the information supplied for the portfolio.
+- There is no contact email on the page because none was provided.
+- The supplied files did not include a NUST logo, so the education card uses a text-only NUST mark. NUST states that its emblem/signature requires prior written approval for use — if you have an approved asset, drop it in `assets/` and reference it from `index.html`.
+- Institution logos belong to their respective institutions and are used for identification purposes only.
 
 ## Credits
 
-- Typeface: **Inter** (Rasmus Andersson), SIL Open Font License.
-- Logos of NUST, Punjab Group of Colleges and Army Public Schools & Colleges System belong to their respective institutions and are used for identification purposes only.
+- Reference fonts shown by CSS stack: **Arial Narrow / Impact** for display type, **Inter** for body copy.
+- Site content and design: Muhammad Aneeq Khan.
