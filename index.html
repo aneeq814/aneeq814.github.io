@@ -326,6 +326,11 @@
     .social-link .external-arrow { color: var(--acid); font-size: 1.2rem; }
     .social-link.email-link > span:first-child { min-width: 0; }
     .social-link.email-link .email-address { font-size: clamp(1rem, 1.45vw, 1.32rem); line-height: 1.12; letter-spacing: .004em; text-transform: none; overflow-wrap: break-word; }
+    .social-note { min-height: 91px; padding: 14px 0; display: grid; grid-template-columns: 1fr 24px; align-items: center; gap: 10px; border-bottom: 1px solid var(--line-strong); }
+    .social-note small { display: block; margin-bottom: 6px; color: var(--muted); font: .54rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .social-note strong { display: block; font-family: var(--display); font-size: 1.8rem; font-weight: 500; line-height: 1; text-transform: uppercase; }
+    .social-note .request-note { color: var(--acid); }
+    .social-note .external-arrow { color: transparent; font-size: 1.2rem; }
     .contact-foot { display: flex; justify-content: space-between; gap: 22px; margin-top: 80px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--muted); font: .57rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 
     /* Footer */
@@ -465,6 +470,7 @@
       .contact-copy { font-size: .88rem; }
       .social-link { min-height: 78px; }
       .social-link.email-link .email-address { font-size: 1rem; line-height: 1.15; }
+      .social-note { min-height: 78px; }
       .contact-foot { margin-top: 50px; font-size: .51rem; }
       .footer-inner { min-height: 95px; flex-wrap: wrap; justify-content: space-between; row-gap: 14px; }
       .footer-meta { width: 100%; order: 3; }
@@ -690,6 +696,9 @@
             <a class="social-link email-link" href="mailto:maneeq.bscs26seecs@seecs.edu.pk">
               <span><small>University email</small><strong class="email-address">maneeq.bscs26seecs<wbr>@seecs.edu.pk</strong></span><span class="external-arrow" aria-hidden="true">↗</span>
             </a>
+            <div class="social-note" role="note">
+              <span><small class="request-note">Available on request</small><strong>WhatsApp</strong></span><span class="external-arrow" aria-hidden="true">↗</span>
+            </div>
             <p class="contact-foot"><span>Based in Islamabad</span><span>Always learning / always open</span></p>
           </div>
         </div>
