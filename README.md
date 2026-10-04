@@ -30,7 +30,11 @@ A responsive, static one-page portfolio built with **vanilla HTML, CSS and JavaS
 │   ├── aneeq-mark.jpg
 │   ├── pgc-logo.png
 │   └── apsacs-logo.jpg
-└── previous-design/    # the earlier "specimen viewer" build, kept for reference
+└── previous-design/    # the previous "specimen viewer" build, archived whole
+    ├── index.html      # byte-identical to what was live before this change
+    ├── src/index.template.html
+    ├── build.py
+    └── assets/
 ```
 
 ## Preview locally
@@ -40,6 +44,17 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Rolling back to the previous design
+
+`previous-design/` holds the earlier "specimen viewer" build, complete and rebuildable:
+
+```bash
+cd previous-design
+python3 build.py     # regenerates index.html from src/index.template.html + assets/
+```
+
+Running its `build.py` reproduces the archived `index.html` byte-for-byte. To restore it site-wide, move those files back to the repository root.
 
 ## Published with GitHub Pages
 
